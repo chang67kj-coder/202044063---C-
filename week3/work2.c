@@ -1,7 +1,7 @@
 #pragma warning(disable: 4996)
 #include <stdio.h>
 
-int main()
+int main()55
 {
     int outcome;
     char grades;
@@ -9,22 +9,25 @@ int main()
     printf("결과 점수를 입력하세요(0-100): ");
     scanf("%d", &outcome);
 
-    if (outcome >= 90) {
+    switch (outcome / 10) {
+    case 10:
+    case 9:
         grades = 'A';
-    }
-    else if (outcome >= 80) {
+        break;
+    case 8:
         grades = 'B';
-    }
-    else if (outcome >= 70) {
+        break;
+    case 7:
         grades = 'C';
-    }
-    else if (outcome >= 60) {
+        break;
+    case 6:
         grades = 'D';
-    }
-    else {
+        break;
+    default:
         grades = 'F';
+        break;
     }
-    
+
     printf("학점은: %c \n", grades);
     return 0;
 }
